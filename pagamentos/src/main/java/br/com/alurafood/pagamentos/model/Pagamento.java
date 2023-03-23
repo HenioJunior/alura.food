@@ -4,6 +4,7 @@ import br.com.alurafood.pagamentos.enums.Status;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -15,6 +16,7 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "pagamentos")
 @Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Pagamento {
