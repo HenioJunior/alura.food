@@ -16,20 +16,6 @@ public final class PagamentoDto {
     private Long pedidoId;
     private Long formaDePagamentoId;
 
-    public PagamentoDto(
-            BigDecimal valor, String nome, String numero, String expiracao, String codigo, Status status, Long pedidoId,
-            Long formaDePagamentoId
-    ) {
-        this.valor = valor;
-        this.nome = nome;
-        this.numero = numero;
-        this.expiracao = expiracao;
-        this.codigo = codigo;
-        this.status = status;
-        this.pedidoId = pedidoId;
-        this.formaDePagamentoId = formaDePagamentoId;
-    }
-
     public Long getId() {
         return id;
     }

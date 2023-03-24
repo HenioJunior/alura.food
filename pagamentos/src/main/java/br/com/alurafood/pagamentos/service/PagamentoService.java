@@ -29,7 +29,7 @@ public class PagamentoService {
 
     public PagamentoDto obterPorId(Long id) {
         Pagamento pagamento = repository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException());
+                .orElseThrow(EntityNotFoundException::new);
 
         return modelMapper.map(pagamento, PagamentoDto.class);
     }
@@ -50,7 +50,9 @@ public class PagamentoService {
     }
 
     public void excluirPagamento(Long id) {
-        repository.deleteById(id);
+        Pagamento pagamento = repository.findById(id)
+                .orElseThrow(EntityNotFoundException::new);
+        repository.deleteById(pagamento.getId());
     }
 
 }
