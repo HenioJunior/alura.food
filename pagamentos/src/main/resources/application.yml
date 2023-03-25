@@ -20,7 +20,16 @@ spring:
     properties:
       hibernate:
         show_sql: true
+
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8081/eureka
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      atualizaPedido:
+        slidingWindowSize: 3
+        minimumNumberOfCalls: 2
+        waitDurationInOpenState: 50s
