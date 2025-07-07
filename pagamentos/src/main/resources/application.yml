@@ -9,8 +9,8 @@ spring:
       enabled: ALWAYS
   datasource:
     url: jdbc:postgresql://localhost:5432/pagamentos
-    username: postgres
-    password: P@ssw0rd
+    username: alibou
+    password: alibou
   jpa:
     hibernate:
       ddl-auto: update
